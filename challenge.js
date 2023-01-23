@@ -42,7 +42,6 @@ function array_challenge(interval, integer_array) {
   for (var i = 0; i < integer_array.length; i++) {
     if (j == 0) {
       if (i == integer_array.length - 1) {
-        console.log(i)
         pass_array.push(integer_array[i])
         output_array.push(pass_array)
         pass_array = []
@@ -51,13 +50,13 @@ function array_challenge(interval, integer_array) {
         j++
       }
     } else if (j == interval - 1) {
-      console.log(i)
+      
       pass_array.push(integer_array[i])
       output_array.push(pass_array)
       pass_array = []
       j = 0
     } else if (i == integer_array.length - 1) {
-      console.log("wtf")
+      
       pass_array.push(integer_array[i])
       output_array.push(pass_array)
     } else {
@@ -65,11 +64,11 @@ function array_challenge(interval, integer_array) {
       j++
     }
   }
-  console.log(output_array)
   for (var i = 0; i < output_array.length; i++) {
     let sorted = output_array[i].sort((a, b) => a - b)
     output.push({pass: i + 1, i_min: sorted[0], i_max: sorted[sorted.length - 1]})
   }
+  console.log(integer_array)
   console.log(output)
 }
 
