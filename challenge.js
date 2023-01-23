@@ -1,5 +1,3 @@
-var fs = require("fs")
-
 var int_array = [
   3,
   7,
@@ -28,6 +26,7 @@ var int_array = [
  * Assumes single-digit integers.
  */
 function array_challenge(interval, integer_array) {
+  console.time('exec')
   //define output array
   let output = []
   //define array to populate each pass
@@ -50,13 +49,11 @@ function array_challenge(interval, integer_array) {
         j++
       }
     } else if (j == interval - 1) {
-      
       pass_array.push(integer_array[i])
       output_array.push(pass_array)
       pass_array = []
       j = 0
     } else if (i == integer_array.length - 1) {
-      
       pass_array.push(integer_array[i])
       output_array.push(pass_array)
     } else {
@@ -70,6 +67,8 @@ function array_challenge(interval, integer_array) {
   }
   console.log(integer_array)
   console.log(output)
+
+  console.timeEnd('exec')
 }
 
 array_challenge(3, int_array)
