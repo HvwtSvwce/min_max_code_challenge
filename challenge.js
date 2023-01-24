@@ -29,8 +29,16 @@
 
 var int_array = []
 
-for (var i = 0; i < 250; i++) {
-  int_array.push(Math.ceil(Math.random() * 100))
+
+
+for (var lol = 1; lol < 21; lol++) {
+  for (var i = 0; i < 100000 * lol; i++) {
+    int_array.push(Math.ceil(Math.random() * 10))
+  }
+  
+  array_challenge(3, int_array)
+
+  int_array = []
 }
 
 /**
@@ -81,11 +89,11 @@ function array_challenge(interval, integer_array) {
     let sorted = output_array[i].sort((a, b) => a - b)
     output.push({pass: i + 1, i_min: sorted[0], i_max: sorted[sorted.length - 1]})
   }
-  console.log(integer_array)
-  console.log(output)
+  // console.log(integer_array)
+  // console.log(output)
 
   console.log("input array length: " + integer_array.length)
   console.timeEnd('exec')
 }
 
-array_challenge(3, int_array)
+// array_challenge(3, int_array)
