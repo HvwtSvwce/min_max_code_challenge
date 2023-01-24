@@ -1,21 +1,37 @@
-var int_array = [
-  3,
-  7,
-  2,
-  1,
-  9,
-  3,
-  2,
-  9,
-  5,
-  4,
-  7,
-  6,
-  18,
-  17,
-  27,
-  24
-]
+// var int_array = [
+//   3,
+//   7,
+//   2,
+//   1,
+//   9,
+//   3,
+//   2,
+//   9,
+//   5,
+//   4,
+//   7,
+//   6,
+//   18,
+//   17,
+//   27,
+//   24,
+//   82,
+//   97,
+//   104,
+//   332,
+//   28,
+//   872,
+//   99,
+//   34,
+//   93,
+//   84
+// ]
+
+var int_array = []
+
+for (var i = 0; i < 250; i++) {
+  int_array.push(Math.ceil(Math.random() * 100))
+}
 
 /**
  * 
@@ -68,6 +84,7 @@ function array_challenge(interval, integer_array) {
   console.log(integer_array)
   console.log(output)
 
+  console.log("input array length: " + integer_array.length)
   console.timeEnd('exec')
 }
 
